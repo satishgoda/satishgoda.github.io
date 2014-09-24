@@ -1,0 +1,17 @@
+@startuml
+
+''top to bottom direction
+:Mind: as A
+:Body: as B
+
+left to right direction
+A -- B
+A .. B
+
+newpage
+
+A -left-> B
+B -up-> (C)
+(C) ..> A
+
+@enduml

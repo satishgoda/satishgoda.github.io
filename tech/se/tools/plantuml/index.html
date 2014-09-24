@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+<style>
+    body {
+        font-family: Verdana;
+    }
+    .heading {
+        font-size: 16px;
+    }
+    .body {
+        font-size: 12px;
+    }
+    .code.puml {
+        font-family: Monospace;
+    }
+</style>
+</head>
+<body>
+<h1 class="heading"> PlantUML to the Rescue</h1>
+<div class="body">
+    PlantUML came to my rescue today.
+
+<h3> Example </h3>
+    <pre class="code.puml">
+@startuml
+
+''top to bottom direction
+:Mind: as A
+:Body: as B
+
+left to right direction
+A -- B
+A .. B
+
+newpage
+
+A -left-> B
+B -up-> (C)
+(C) ..> A
+
+@enduml
+    </pre>
+    <img src="first/first-000.png"/>
+    <br/>
+    <img src="first/first-001.png"/>
+<h3> Links </h3>
+    <ol>
+        <li><a href="http://plantuml.sourceforge.net">Website</a></li>
+        <li><a href="http://plugins.jetbrains.com/plugin/?idea&id=7017">JetBrains Plugin</a></li>
+    </ol>
+</div>
+</body>
+</html>
