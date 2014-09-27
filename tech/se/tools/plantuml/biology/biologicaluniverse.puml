@@ -1,0 +1,33 @@
+@startuml
+title Cellular Construction Architecture
+
+(Biological Universe) as BiologicalUniverse
+'(Prokaryotic Cells) as ProkaryoticCells
+'(Eukaryotic Cells) as EukaryoticCells
+
+(Bacteria) as B
+(Archaea) as A
+
+[Prokaryotic Cells] as PC
+note as PCN
+*Lack defined nucleus
+*Simplified internal organization
+end note
+PC .l. PCN
+
+[Eukaryotic Cells] as EC
+note as ECN
+*More complicated internal structure
+*Defined, membrane-limited nucleus
+end note
+EC  .r. ECN
+
+top to bottom direction
+
+BiologicalUniverse -d-> PC
+BiologicalUniverse -d-> EC
+
+PC -down-> B
+PC -down-> A
+
+@enduml

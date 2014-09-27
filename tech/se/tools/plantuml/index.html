@@ -13,18 +13,27 @@
     .body {
         font-size: 12px;
     }
-    .code.puml {
+    .pumlcode {
         font-family: Monospace;
+        border-style: dotted;
+    }
+    .pumlexample {
+        text-align: center;
+        color: gray;
     }
 </style>
 </head>
 <body>
 <h1 class="heading"> PlantUML to the Rescue</h1>
 <div class="body">
-    PlantUML came to my rescue today.
+    PlantUML has always been the diagramming tool that I was looking for. I am a visual person and
+    the ability to put my thoughts into diagrams is much easier now. I ran into PlantUML while
+    developing software in PyCharm. I was in the middle of understanding a large scale Python
+    code-base and needed a visualization tool to take notes and get the big picture of
+    the design of the library.
 
-<h3> Example </h3>
-    <pre class="code.puml">
+<h3 class="pumlexample"> Example 1</h3>
+<pre class="pumlcode">
 @startuml
 
 ''top to bottom direction
@@ -42,10 +51,47 @@ B -up-> (C)
 (C) ..> A
 
 @enduml
-    </pre>
+</pre>
     <img src="first/first-000.png"/>
     <br/>
     <img src="first/first-001.png"/>
+
+<h3 class="pumlexample"> Example 2</h3>
+<pre class="pumlcode">
+@startuml
+title Cellular Construction Architecture
+
+(Biological Universe) as BiologicalUniverse
+
+(Bacteria) as B
+(Archaea) as A
+
+[Prokaryotic Cells] as PC
+note as PCN
+*Lack defined nucleus
+*Simplified internal organization
+end note
+PC .l. PCN
+
+[Eukaryotic Cells] as EC
+note as ECN
+*More complicated internal structure
+*Defined, membrane-limited nucleus
+end note
+EC  .r. ECN
+
+top to bottom direction
+
+BiologicalUniverse -d-> PC
+BiologicalUniverse -d-> EC
+
+PC -down-> B
+PC -down-> A
+@enduml
+</pre>
+    <img src="biology/biologicaluniverse.png"/>
+    <br/>
+
 <h3> Links </h3>
     <ol>
         <li><a href="http://plantuml.sourceforge.net">Website</a></li>
