@@ -7,32 +7,53 @@
     body {
         font-family: Verdana;
     }
-    .heading {
-        font-size: 16px;
+    h1,h2 {
+        text-align: center;
     }
-    .body {
+    h1.heading {
+        font-size: 18px;
+        background-color:#999999;
+    }
+    div.abstract {
         font-size: 12px;
+        text-align:justify;
+        border-style: dotted;
+        border-width: 1px;
+        padding: 15px;
+    }
+    h2.pumlexample {
+        font-size: 16px;
+        background-color:#999999;
     }
     .pumlcode {
+        margin-left: 50px;
         font-family: Monospace;
+        background-color:#DDDD22;
         border-style: dotted;
+        border-width: 1px;
+        padding: 15px;
     }
-    .pumlexample {
-        text-align: center;
-        color: gray;
+    .pumlimage {
+        margin-left: 50px;
+        border-style: dashed;
+        border-width: 1px;
+        padding: 15px;
     }
 </style>
 </head>
+
 <body>
 <h1 class="heading"> PlantUML to the Rescue</h1>
-<div class="body">
+
+<div class="abstract">
     PlantUML has always been the diagramming tool that I was looking for. I am a visual person and
     the ability to put my thoughts into diagrams is much easier now. I ran into PlantUML while
     developing software in PyCharm. I was in the middle of understanding a large scale Python
     code-base and needed a visualization tool to take notes and get the big picture of
     the design of the library.
+</div>
 
-<h3 class="pumlexample"> Example 1</h3>
+<h2 class="pumlexample"> Example 1</h2>
 <pre class="pumlcode">
 @startuml
 
@@ -52,11 +73,12 @@ B -up-> (C)
 
 @enduml
 </pre>
-    <img src="first/first-000.png"/>
-    <br/>
-    <img src="first/first-001.png"/>
 
-<h3 class="pumlexample"> Example 2</h3>
+<img class="pumlimage" src="first/first-000.png"/>
+<br/>
+<img class="pumlimage" src="first/first-001.png"/>
+
+<h2 class="pumlexample"> Example 2</h2>
 <pre class="pumlcode">
 @startuml
 title Cellular Construction Architecture
@@ -89,14 +111,15 @@ PC -down-> B
 PC -down-> A
 @enduml
 </pre>
-    <img src="biology/biologicaluniverse.png"/>
-    <br/>
+
+<img class="pumlimage" src="biology/biologicaluniverse.png"/>
+<br/>
 
 <h3> Links </h3>
-    <ol>
-        <li><a href="http://plantuml.sourceforge.net">Website</a></li>
-        <li><a href="http://plugins.jetbrains.com/plugin/?idea&id=7017">JetBrains Plugin</a></li>
-    </ol>
-</div>
+<ol>
+    <li><a href="http://plantuml.sourceforge.net">Website</a></li>
+    <li><a href="http://plugins.jetbrains.com/plugin/?idea&id=7017">JetBrains Plugin</a></li>
+</ol>
+
 </body>
 </html>
