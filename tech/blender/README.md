@@ -12,3 +12,7 @@
 
 ## Blender at Siggraph 2014
 * http://www.blender.org/news/siggraph-2014-report
+
+## 20 Years of Blender
+* http://code.blender.org/index.php/2013/12/how-blender-started-twenty-years-ago
+* http://download.blender.org/source/chest/neogeo
