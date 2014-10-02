@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h2>Abstract</h2>
+I have finally setup Qt development environment on my laptop using the MinGW toolchain.
+<br/><br/>
+I downloaded an all encompassing pre-built binary from <a href="http://sourceforge.net/projects/mingwbuilds/files/external-binary-packages/Qt-Builds">here</a>
+and extracted the archive to my E drive's following folder.
+<br/><br/>
+x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)
+<br/>
+<img src="MinGW_qt_toolchain.png"/>
+
+<h3>Updating the PATH variable</h3>
+
+In order for us to launch QtCreator, QtAssistant etc., The following path must be appended to
+the system PATH variable.
+
+<pre class="filepath">
+E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\prerequisites-x86_64\bin;
+</pre>
+
+In order for compiled binaries to be run successfully (from outside QtCreator), the following path
+must also be appended to the system PATH variable.
+
+<pre class="filepath">
+E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\bin;
+</pre>
+
+<h3>QtCreator Kit Setup</h3>
+
+<h4>Choosing Qt Version</h4>
+
+<img src="qtcreator_setup_kit_2.png"/>
+
+<br/><br/>
+
+<b>Qt version 4.8.5 for Desktop (Details)</b>
+<pre>
+Name: Qt 4.8.5 (Qt-4.8.5-x86_64)
+ABI: x86-windows-msys-pe-64bit
+Source: E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64
+mkspec: default
+qmake: E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\bin\qmake.exe
+Default: debug
+Version: 4.8.5
+QMAKE_VERSION 2.01a
+QT_HOST_BINS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\bin
+QT_HOST_DATA E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64
+QT_HOST_PREFIX E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64
+QT_INSTALL_BINS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\bin
+QT_INSTALL_CONFIGURATION E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64
+QT_INSTALL_DATA E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64
+QT_INSTALL_DEMOS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\demos
+QT_INSTALL_DOCS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\doc
+QT_INSTALL_EXAMPLES E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\examples
+QT_INSTALL_HEADERS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\include
+QT_INSTALL_IMPORTS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\imports
+QT_INSTALL_LIBS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\lib
+QT_INSTALL_PLUGINS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\plugins
+QT_INSTALL_PREFIX E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64
+QT_INSTALL_TRANSLATIONS E:\x64-Qt-4.8.5+qtcreator-3.0.0-beta-(gcc-4.8.2-seh-rt_v3-rev0)\Qt-4.8.5-x86_64\translations
+QT_VERSION 4.8.5
+</pre>
+
+<h4>Choosing Compiler</h4>
+
+<img src="qtcreator_setup_kit_3.png"/>
+<br/><br/>
+
+<h4>Choosing Debugger</h4>
+
+<img src="qtcreator_setup_kit_4.png"/>
+<br/><br/>
+
+<h4>Creating the Kit</h4>
+<img src="qtcreator_setup_kit_1.png"/>
+<br/><br/>
+<h2>Links and References</h2>
+<ol>
+    <li><a href="http://qt-project.org/wiki/MinGW">MinGW and Qt</a></li>
+    <li><a href="http://qt-project.org/wiki/MinGW-64-bit">MinGW 64 bit</a></li>
+</ol>
+</body>
+</html>
